@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "role": "Software Developer as Technical Lead",
+    "organisation": "HCL Tech PVT LTD",
+    "startDate": "Mar 2023",
+    "endDate": "Present, ",
+    "location": "Noida, UP, India",
+    "experiences": [
+      "Working as Technical Lead",
+      "Working With HCL Tech ERS Team"
+    ],
+    "imageSrc": "company/hcl.jpeg"
+  },
+  {
+    "id": 2,
+    "role": "Senior Software Developer - Engineer",
+    "organisation": "Tech Mahindra PVT LTD",
+    "startDate": "Nov 2021 to ",
+    "endDate": "Mar 2023, ",
+    "location": "Noida, UP, India",
+    "experiences": [
+      "Worked as Senior Software Developer",
+      "Worked With Tech Mahindra IT Department"
+    ],
+    "imageSrc": "company/tech_mahindra.png"
+  },
+  {
+    "id": 3,
+    "role": "Software Developer - Engineer",
+    "organisation": "Appventurez PVT  LTD",
+    "startDate": "Nov 2020 to ",
+    "endDate": "Oct 2021",
+    "location": "Noida, UP, India",
+    "experiences": [
+      "Worked as Software Developer",
+      "Worked With Appventurez IT Department"
+    ],
+    "imageSrc": "company/appventurez.jpeg"
+  },
+  {
+    "id": 4,
+    "role": "Software Developer - Engineer",
+    "organisation": "Digi Neo Solutions PVT LTD",
+    "startDate": "Sep 2019 to ",
+    "endDate": "Nov 2020",
+    "location": "Noida, UP, India",
+    "experiences": [
+      "Worked as Software Developer",
+      "Worked With Digi Neo Solutions IT Department"
+    ],
+    "imageSrc": "company/neo_digi.jpeg"
+  },
+  {
+    "id": 5,
+    "role": "Software Developer - Engineer",
+    "organisation": "Social Sanskaari PVT LTD",
+    "startDate": "Aug 2017 to ",
+    "endDate": "Sep 2019, ",
+    "location": "Ashok Vihar, Delhi, India",
+    "experiences": [
+      "Worked as Software Developer",
+      "Worked With Social Sanskaari IT Department"
+    ],
+    "imageSrc": "company/sanskaari.png"
+  }
+]
