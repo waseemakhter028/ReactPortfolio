@@ -1,20 +1,17 @@
-import React from "react";
 import project from "./data/projects.json";
 
 const Projects = () => {
   return (
-    <div className="container projects my-3" id="projects">
-      <h1>PROJECTS</h1>
-      <div className="row d-flex justify-content-center align-content-center">
+    <section className="container projects mt-5 mb-3" id="projects">
+      <h2 className="section_title h1">PROJECTS</h2>
+      <div className="row g-4 justify-content-center mt-3">
         {project.map((data) => (
-          <div key={data.id} className="my-4 col-sm-6 col-md-4 col-lg-3 mx-4">
-            <div
-              className="card bg-dark text-light"
-              style={{
-                width: "18rem",
-                border: "1px solid yellow",
-                boxShadow: "5px 5px 10px 10px rgba(101, 175, 10, 0.5)",
-              }}
+          <div
+            key={data.key}
+            className="col-12 col-sm-6 col-xl-3 d-flex justify-content-center"
+          >
+            <article
+              className="card bg-dark text-light d-flex flex-column h-100 project-card"
               data-aos="flip-right"
               data-aos-duration="1000"
             >
@@ -22,27 +19,28 @@ const Projects = () => {
                 <img
                   src={data.imageSrc}
                   className="card-img-top"
-                  alt="..."
-                  style={{
-                    width: "250px",
-                    height: "200px",
-                    border: "2px solid yellow",
-                    borderRadius: "10px",
-                  }}
+                  alt={data.title}
+                  loading="lazy"
                 />
               </div>
-              <div className="card-body text-center">
-                <h4 className="card-title">{data.title}</h4>
-                <p className="card-text">{data.description}</p>
-                <a href={data.demo} className="btn btn-primary mx-3">
+              <div className="card-body text-center d-flex flex-column">
+                <h3 className="card-title h4">{data.title}</h3>
+                <p className="card-text flex-grow-1">{data.description}</p>
+                <a
+                  href={data.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-primary mx-3 mt-auto"
+                  aria-label={`${data.title} demo (opens in a new tab)`}
+                >
                   Demo
                 </a>
               </div>
-            </div>
+            </article>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

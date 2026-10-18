@@ -1,43 +1,35 @@
-import React from "react";
-import { FaInstagram } from "react-icons/fa";
-import { CiFacebook } from "react-icons/ci";
 import { CiLinkedin } from "react-icons/ci";
-import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaGithubSquare } from "react-icons/fa";
-import { SiGmail } from "react-icons/si";
 
 const Contact = () => {
   return (
-    <div className="container contact" id="contact">
-      <h1>CONTACT ME</h1>
+    <section className="container contact mt-5" id="contact">
+      <h2 className="section_title h1">CONTACT ME</h2>
       <div
         className="contact-icon"
         data-aos="zoom-in-up"
         data-aos-duration="1000"
       >
         <a
-          href="https://www.linkedin.com/in/waseem-akhter-3661061b8"
+          href="https://www.linkedin.com/in/waseem-akhter-5202473ab"
           target="_blank"
+          rel="noopener noreferrer"
           className="items"
+          aria-label="LinkedIn profile (opens in a new tab)"
         >
-          <CiLinkedin className="icons" />
+          <CiLinkedin className="icons" aria-hidden="true" />
         </a>
         <a
           href="https://github.com/waseemakhter028"
           target="_blank"
+          rel="noopener noreferrer"
           className="items"
+          aria-label="GitHub profile (opens in a new tab)"
         >
-          <FaGithubSquare className="icons" />
-        </a>
-        <a
-          href="mailto:akhterwaseem09@gmail.com"
-          target="_blank"
-          className="items"
-        >
-          <SiGmail className="icons" />
+          <FaGithubSquare className="icons" aria-hidden="true" />
         </a>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,13 +1,12 @@
-import React from "react";
 import experience from "./data/experience.json";
 
 const Experience = () => {
   return (
-    <div className="container ex" id="experience">
-      <h1>EXPERIENCE</h1>
+    <section className="container ex" id="experience">
+      <h2 className="section_title h1">EXPERIENCE</h2>
       {experience.map((data) => {
         return (
-          <div
+          <article
             key={data.id}
             className="ex-items text-center my-5"
             data-aos="zoom-in"
@@ -16,26 +15,30 @@ const Experience = () => {
             <div className="left">
               <img
                 src={`/assets/${data.imageSrc}`}
-                alt=""
-                style={{ height: "50px", width: "130px" }}
+                alt={`${data.organisation} logo`}
+                className="ex-logo"
+                loading="lazy"
               />
             </div>
             <div className="right">
-              <h2 style={{ color: "yellowgreen" }}>{data.organisation}</h2>
-              <h2>{data.role}</h2>
-              <h4>
-                <span style={{ color: "yellowgreen" }}>
-                  {data.startDate} {data.endDate}{" "}
+              <h3 className="ex-org">{data.organisation}</h3>
+              <h3 className="ex-role">{data.role}</h3>
+              <p className="ex-meta">
+                <span className="ex-date">
+                  {data.startDate} to {data.endDate},
                 </span>{" "}
-                <span style={{ color: "yellow" }}>{data.location}</span>
-              </h4>
-              <h5 style={{ color: "yellow" }}>{data.experiences[0]}</h5>
-              <h5 style={{ color: "yellow" }}>{data.experiences[1]}</h5>
+                <span className="ex-location">{data.location}</span>
+              </p>
+              {data.experiences.map((item) => (
+                <p key={item} className="ex-point">
+                  {item}
+                </p>
+              ))}
             </div>
-          </div>
+          </article>
         );
       })}
-    </div>
+    </section>
   );
 };
 

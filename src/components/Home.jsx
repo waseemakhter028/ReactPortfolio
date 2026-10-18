@@ -1,18 +1,27 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import pdf from "../pdf/WASEEM_AKHTER_RESUME.pdf";
 import hero from "./data/hero.json";
 import Typed from "typed.js";
 
+const typedStrings = [
+  "Welcome to my profile",
+  "My Name is Waseem Akhter",
+  "I'm full stack developer",
+  "Tech Stack (React JS, Node JS, Express Js, Mongo DB, Redux, AWS, Python, Generative AI (GenAI), Open AI, RAG, LLMs, Vector DB)",
+];
+
+const longestString = typedStrings.reduce((a, b) => (b.length > a.length ? b : a));
+
 const Home = () => {
   const typedRef = useRef(null);
   useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      typedRef.current.textContent = typedStrings[1];
+      return;
+    }
+
     const options = {
-      strings: [
-        "Welcome to my profile",
-        "My Name is Waseem Akhter",
-        "I'm full stack developer",
-        "Tech Stack (React JS, Node JS, Express Js, Mongo DB, Redux, AWS)",
-      ],
+      strings: typedStrings,
       typeSpeed: 50,
       backSpeed: 50,
       loop: true,
@@ -26,13 +35,23 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="container home" id="home">
+    <section className="container home" id="home">
       <div className="left" data-aos="fade-up-right" data-aos-duration="1000">
-        <h1 ref={typedRef}></h1>
+        <div className="typed_wrap">
+          <div className="typed_ghost" aria-hidden="true">
+            {longestString}|
+          </div>
+          <h1>
+            <span className="visually-hidden">
+              Waseem Akhter, Full Stack Developer
+            </span>
+            <span ref={typedRef} aria-hidden="true"></span>
+          </h1>
+        </div>
 
         <a
           href={pdf}
-          download="Resume.pdf"
+          download="Waseem_Akhter_Resume.pdf"
           className="btn btn-outline-warning my-3"
         >
           Download Resume
@@ -40,10 +59,13 @@ const Home = () => {
       </div>
       <div className="right">
         <div className="img" data-aos="fade-up-left" data-aos-duration="1000">
-          <img src={`/assets/${hero.imgSrc}`} alt="hero" />
+          <img
+            src={`/assets/${hero.imgSrc}`}
+            alt="Illustration of Waseem Akhter working on a laptop"
+          />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

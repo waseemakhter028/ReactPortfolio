@@ -44,6 +44,38 @@
     "imageSrc": "skills/redux.png"
   },
   {
+    "title": "Python",
+    "imageSrc": "skills/python.png"
+  },
+  {
+    "title": "Generative AI (OpenAI API)",
+    "imageSrc": "skills/generative_ai.png"
+  },
+  {
+    "title": "RAG (Retrieval-Augmented Generation)",
+    "imageSrc": "skills/rag.png"
+  },
+  {
+    "title": "Embeddings & Vector Databases",
+    "imageSrc": "skills/vector_db.png"
+  },
+  {
+    "title": "LLMs (Large Language Models)",
+    "imageSrc": "skills/llms.png"
+  },
+  {
+    "title": "MCP Server",
+    "imageSrc": "skills/mcp.png"
+  },
+  {
+    "title": "Lang Chain",
+    "imageSrc": "skills/lang_chain.png"
+  },
+  {
+    "title": "GitHub Copilot",
+    "imageSrc": "skills/github_copilot.png"
+  },
+  {
     "title": "Jest",
     "imageSrc": "skills/jest.png"
   },
